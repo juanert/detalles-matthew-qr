@@ -14,8 +14,8 @@ export default function Home() {
   const { params } = useParams() as unknown as CatchAllParams;
   const [rawMensaje, rawNombre] = params ?? [];
 
-  const mensaje = dec(rawMensaje) || "sin-mensaje";
-  const nombre = dec(rawNombre) || "sin-nombre";
+  const mensaje = dec(rawMensaje) || "¡Hola, este es tu detalle personalizado!";
+  const nombre = dec(rawNombre);
 
   const bgColorRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
@@ -105,7 +105,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={bgColorRef} className="relative min-h-screen overflow-hidden bg-gradient-to-br from-fuchsia-500 from- via-pink-500 via- to-yellow-500 to-75%">
+    <div ref={bgColorRef} className="relative min-h-screen overflow-hidden bg-gradient-to-b from-fuchsia-500 via-pink-500 to-yellow-500 to-75%">
       {/* Fondo animado */}
       <div ref={bgRef} className="absolute inset-0 -z-10">
         {/* Blob 1 */}
@@ -145,9 +145,7 @@ export default function Home() {
 
         <p
           ref={nameRef}
-          className="mt-4 inline-flex items-center gap-2 rounded-full border border-yellow-200/60 
-                     bg-yellow-50/60 px-5 py-2.5 text-yellow-900 shadow-sm backdrop-blur
-                     text-base md:text-lg font-semibold"
+          className={nombre ? "mt-4 inline-flex items-center gap-2 rounded-full border border-yellow-200/60 bg-yellow-50 /60 px-5 py-2.5 text-yellow-900 shadow-sm backdrop-blur text-base md:text-lg font-semibold" : "hidden"}
           aria-label="Nombre"
           title={nombre}
         >
@@ -155,9 +153,9 @@ export default function Home() {
           {nombre}
         </p>
         <a href="https://www.instagram.com/detallesmatthew_/" target="_blank" rel="noopener noreferrer">
-          <img src="/images/logo.png" className="mt-6" alt="" width={120}/>
+          <img src="/images/logo.png" className="mt-6" alt="" width={120} />
         </a>
       </main>
-    </div>
+    </div >
   );
 }
