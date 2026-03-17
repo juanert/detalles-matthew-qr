@@ -10,7 +10,7 @@ const dec = (v?: string) => {
   catch { return v; }
 };
 
-export default function Home() {
+export default function MensajePage() {
   const { params } = useParams() as unknown as CatchAllParams;
   const [rawMensaje, rawNombre] = params ?? [];
 
@@ -105,18 +105,18 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={bgColorRef} className="relative min-h-screen overflow-hidden bg-gradient-to-b from-fuchsia-500 via-pink-500 to-yellow-500 to-75%">
+    <div ref={bgColorRef} className="relative min-h-screen overflow-hidden bg-gradient-to-b from-yellow-300 via-yellow-400 to-amber-500">
       {/* Fondo animado */}
       <div ref={bgRef} className="absolute inset-0 -z-10">
         {/* Blob 1 */}
         <div
           className="blob absolute -top-24 -left-16 w-[46rem] h-[46rem] rounded-full blur-3xl opacity-60"
-          style={{ background: "radial-gradient(closest-side, #fde047, transparent 70%)" }}
+          style={{ background: "radial-gradient(closest-side, #fef08a, transparent 70%)" }}
         />
         {/* Blob 2 */}
         <div
           className="blob absolute -bottom-28 -right-24 w-[40rem] h-[40rem] rounded-full blur-3xl opacity-60"
-          style={{ background: "radial-gradient(closest-side, #f59e0b, transparent 70%)" }}
+          style={{ background: "radial-gradient(closest-side, #fbbf24, transparent 70%)" }}
         />
         {/* Blob 3 */}
         <div
@@ -125,7 +125,7 @@ export default function Home() {
         />
         {/* velos */}
         <div className="absolute inset-0 [background:radial-gradient(60%_60%_at_50%_0%,rgba(255,255,255,0.20),transparent)]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-50/50 via-yellow-100/30 to-transparent mix-blend-screen" />
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-100/50 via-amber-100/30 to-transparent mix-blend-screen" />
         <div className="absolute inset-0 opacity-[0.06] bg-black" />
       </div>
 
@@ -138,24 +138,24 @@ export default function Home() {
           ref={titleRef}
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight 
                      text-transparent bg-clip-text 
-                     bg-gradient-to-br from-amber-500 via-yellow-400 to-orange-500 drop-shadow-[0_6px_24px_rgba(255,200,0,0.35)]"
+                     bg-gradient-to-br from-amber-700 via-yellow-600 to-amber-800 drop-shadow-[0_6px_24px_rgba(255,200,0,0.35)]"
         >
           {mensaje}
         </h1>
 
         <p
           ref={nameRef}
-          className={nombre ? "mt-4 inline-flex items-center gap-2 rounded-full border border-yellow-200/60 bg-yellow-50 /60 px-5 py-2.5 text-yellow-900 shadow-sm backdrop-blur text-base md:text-lg font-semibold" : "hidden"}
+          className={nombre ? "mt-4 inline-flex items-center gap-2 rounded-full border border-amber-200/60 bg-yellow-50/60 px-5 py-2.5 text-amber-900 shadow-sm backdrop-blur text-base md:text-lg font-semibold" : "hidden"}
           aria-label="Nombre"
           title={nombre}
         >
-          <span className="inline-block w-2 h-2 rounded-full bg-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.8)]" />
+          <span className="inline-block w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_10px_rgba(251,191,36,0.8)]" />
           {nombre}
         </p>
         <a href="https://www.instagram.com/detallesmatthew_/" target="_blank" rel="noopener noreferrer">
           <img src="/images/logo.png" className="mt-6" alt="" width={120} />
         </a>
       </main>
-    </div >
+    </div>
   );
 }
