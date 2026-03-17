@@ -153,7 +153,7 @@ export default function MensajePage() {
           {nombre}
         </p>
         <a href="https://www.instagram.com/detallesmatthew_/" target="_blank" rel="noopener noreferrer">
-          <img src="/images/logo.png" className="mt-6" alt="" width={120} />
+          <img src="/images/favicon.ico" className="mt-6" alt="Detalles Matthew" width={120} />
         </a>
       </main>
     </div>

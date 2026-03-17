@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { QRCodeSVG } from "qrcode.react";
+import { QRCodeCanvas } from "qrcode.react";
 import { toPng } from "html-to-image";
 
 export default function CreacionPage() {
@@ -108,15 +108,15 @@ export default function CreacionPage() {
                   ref={qrRef}
                   className="bg-white p-6 rounded-xl shadow-lg border-4 border-amber-200"
                 >
-                  <QRCodeSVG
+                  <QRCodeCanvas
                     value={generateUrl()}
                     size={200}
                     level="H"
                     includeMargin={false}
                     imageSettings={{
-                      src: "/images/logo.png",
-                      height: 40,
-                      width: 40,
+                      src: "/images/favicon.ico",
+                      height: 50,
+                      width: 50,
                       excavate: true,
                     }}
                   />
