@@ -276,65 +276,6 @@ export default function PromoContent() {
           </h1>
         </header>
 
-        <section className="relative mx-auto max-w-3xl bg-white/75 backdrop-blur rounded-3xl shadow-xl border border-rose-100 px-5 pt-14 pb-8 sm:p-10 md:p-12 mb-12">
-          <div
-            ref={badgeRef}
-            className="absolute -top-8 right-3 sm:-top-6 sm:-right-6 z-20 select-none"
-          >
-            <div className="relative w-16 h-16 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-rose-500 via-pink-500 to-amber-400 shadow-xl flex flex-col items-center justify-center text-white ring-4 ring-white/70">
-              <span className="text-xl sm:text-4xl font-black leading-none">
-                10%
-              </span>
-              <span className="text-[8px] sm:text-xs uppercase tracking-widest font-bold mt-0.5 sm:mt-1">
-                Off
-              </span>
-            </div>
-          </div>
-
-          <p className="text-base sm:text-xl md:text-2xl leading-relaxed text-amber-900 text-center font-medium">
-            Síguenos en Instagram{" "}
-            <a
-              href="https://www.instagram.com/detallesmatthew_/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-bold bg-gradient-to-r from-rose-600 via-pink-600 to-amber-600 bg-clip-text text-transparent hover:underline break-all"
-            >
-              @detallesmatthew_
-            </a>{" "}
-            y reclama un{" "}
-            <span className="font-bold text-rose-600">10% de descuento</span> en
-            tu próximo regalo.
-          </p>
-
-          <div className="mt-7 sm:mt-8 flex flex-col items-center">
-            <a
-              ref={ctaRef}
-              href="https://www.instagram.com/detallesmatthew_/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 sm:gap-3 rounded-full px-6 sm:px-8 py-3.5 sm:py-4 text-white font-bold text-sm sm:text-base md:text-lg shadow-xl transition-transform hover:scale-105 max-w-full"
-              style={{
-                background:
-                  "linear-gradient(45deg, #f59e0b 0%, #ef4444 25%, #ec4899 55%, #8b5cf6 100%)",
-              }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
-              >
-                <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.413.56.218.96.478 1.382.9.422.422.682.823.9 1.382.164.422.36 1.057.413 2.227.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.249 1.805-.413 2.227a3.72 3.72 0 01-.9 1.382 3.72 3.72 0 01-1.382.9c-.422.164-1.057.36-2.227.413-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.805-.249-2.227-.413a3.72 3.72 0 01-1.382-.9 3.72 3.72 0 01-.9-1.382c-.164-.422-.36-1.057-.413-2.227C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.054-1.17.249-1.805.413-2.227.218-.56.478-.96.9-1.382.422-.422.823-.682 1.382-.9.422-.164 1.057-.36 2.227-.413C8.416 2.212 8.8 2.2 12 2.2zm0 1.8c-3.146 0-3.5.012-4.737.068-1.087.05-1.677.231-2.07.384a3.7 3.7 0 00-1.36.884 3.7 3.7 0 00-.884 1.36c-.153.393-.334.983-.384 2.07C2.51 8.5 2.5 8.854 2.5 12s.012 3.5.068 4.737c.05 1.087.231 1.677.384 2.07.21.539.46.92.884 1.36.44.424.821.674 1.36.884.393.153.983.334 2.07.384 1.237.057 1.59.068 4.737.068s3.5-.012 4.737-.068c1.087-.05 1.677-.231 2.07-.384a3.7 3.7 0 001.36-.884c.424-.44.674-.821.884-1.36.153-.393.334-.983.384-2.07.057-1.237.068-1.59.068-4.737s-.012-3.5-.068-4.737c-.05-1.087-.231-1.677-.384-2.07a3.7 3.7 0 00-.884-1.36 3.7 3.7 0 00-1.36-.884c-.393-.153-.983-.334-2.07-.384C15.5 4.01 15.146 4 12 4zm0 3.06A4.94 4.94 0 1116.94 12 4.94 4.94 0 0112 7.06zm0 8.14A3.2 3.2 0 108.8 12a3.2 3.2 0 003.2 3.2zm5.18-8.36a1.155 1.155 0 11-1.155-1.155 1.155 1.155 0 011.155 1.155z" />
-              </svg>
-              <span className="truncate">Seguir @detallesmatthew_</span>
-            </a>
-            <p className="text-[11px] sm:text-xs text-amber-700/80 mt-3 text-center max-w-xs">
-              Muestra que nos sigues al hacer tu pedido para activar tu
-              descuento.
-            </p>
-          </div>
-        </section>
-
         <section
           ref={messageRef}
           className="relative mx-auto max-w-3xl mb-14 px-1"
@@ -488,6 +429,65 @@ export default function PromoContent() {
                 />
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="relative mx-auto max-w-3xl bg-white/75 backdrop-blur rounded-3xl shadow-xl border border-rose-100 px-5 pt-14 pb-8 sm:p-10 md:p-12 mb-12">
+          <div
+            ref={badgeRef}
+            className="absolute -top-8 right-3 sm:-top-6 sm:-right-6 z-20 select-none"
+          >
+            <div className="relative w-16 h-16 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-rose-500 via-pink-500 to-amber-400 shadow-xl flex flex-col items-center justify-center text-white ring-4 ring-white/70">
+              <span className="text-xl sm:text-4xl font-black leading-none">
+                10%
+              </span>
+              <span className="text-[8px] sm:text-xs uppercase tracking-widest font-bold mt-0.5 sm:mt-1">
+                Off
+              </span>
+            </div>
+          </div>
+
+          <p className="text-base sm:text-xl md:text-2xl leading-relaxed text-amber-900 text-center font-medium">
+            Síguenos en Instagram{" "}
+            <a
+              href="https://www.instagram.com/detallesmatthew_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold bg-gradient-to-r from-rose-600 via-pink-600 to-amber-600 bg-clip-text text-transparent hover:underline break-all"
+            >
+              @detallesmatthew_
+            </a>{" "}
+            y reclama un{" "}
+            <span className="font-bold text-rose-600">10% de descuento</span> en
+            tu próximo regalo.
+          </p>
+
+          <div className="mt-7 sm:mt-8 flex flex-col items-center">
+            <a
+              ref={ctaRef}
+              href="https://www.instagram.com/detallesmatthew_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 sm:gap-3 rounded-full px-6 sm:px-8 py-3.5 sm:py-4 text-white font-bold text-sm sm:text-base md:text-lg shadow-xl transition-transform hover:scale-105 max-w-full"
+              style={{
+                background:
+                  "linear-gradient(45deg, #f59e0b 0%, #ef4444 25%, #ec4899 55%, #8b5cf6 100%)",
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
+              >
+                <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.413.56.218.96.478 1.382.9.422.422.682.823.9 1.382.164.422.36 1.057.413 2.227.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.249 1.805-.413 2.227a3.72 3.72 0 01-.9 1.382 3.72 3.72 0 01-1.382.9c-.422.164-1.057.36-2.227.413-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.805-.249-2.227-.413a3.72 3.72 0 01-1.382-.9 3.72 3.72 0 01-.9-1.382c-.164-.422-.36-1.057-.413-2.227C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.054-1.17.249-1.805.413-2.227.218-.56.478-.96.9-1.382.422-.422.823-.682 1.382-.9.422-.164 1.057-.36 2.227-.413C8.416 2.212 8.8 2.2 12 2.2zm0 1.8c-3.146 0-3.5.012-4.737.068-1.087.05-1.677.231-2.07.384a3.7 3.7 0 00-1.36.884 3.7 3.7 0 00-.884 1.36c-.153.393-.334.983-.384 2.07C2.51 8.5 2.5 8.854 2.5 12s.012 3.5.068 4.737c.05 1.087.231 1.677.384 2.07.21.539.46.92.884 1.36.44.424.821.674 1.36.884.393.153.983.334 2.07.384 1.237.057 1.59.068 4.737.068s3.5-.012 4.737-.068c1.087-.05 1.677-.231 2.07-.384a3.7 3.7 0 001.36-.884c.424-.44.674-.821.884-1.36.153-.393.334-.983.384-2.07.057-1.237.068-1.59.068-4.737s-.012-3.5-.068-4.737c-.05-1.087-.231-1.677-.384-2.07a3.7 3.7 0 00-.884-1.36 3.7 3.7 0 00-1.36-.884c-.393-.153-.983-.334-2.07-.384C15.5 4.01 15.146 4 12 4zm0 3.06A4.94 4.94 0 1116.94 12 4.94 4.94 0 0112 7.06zm0 8.14A3.2 3.2 0 108.8 12a3.2 3.2 0 003.2 3.2zm5.18-8.36a1.155 1.155 0 11-1.155-1.155 1.155 1.155 0 011.155 1.155z" />
+              </svg>
+              <span className="truncate">Seguir @detallesmatthew_</span>
+            </a>
+            <p className="text-[11px] sm:text-xs text-amber-700/80 mt-3 text-center max-w-xs">
+              Muestra que nos sigues al hacer tu pedido para activar tu
+              descuento.
+            </p>
           </div>
         </section>
 
