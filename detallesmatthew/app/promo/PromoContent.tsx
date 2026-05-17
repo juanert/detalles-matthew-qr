@@ -20,6 +20,7 @@ export default function PromoContent() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const badgeRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLAnchorElement>(null);
+  const messageRef = useRef<HTMLElement>(null);
   const qrSectionRef = useRef<HTMLElement>(null);
   const galleryRef = useRef<HTMLElement>(null);
   const footerRef = useRef<HTMLElement>(null);
@@ -159,6 +160,14 @@ export default function PromoContent() {
           { y: 20, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.6 },
           "-=0.4"
+        );
+      }
+      if (messageRef.current) {
+        tl.fromTo(
+          messageRef.current,
+          { y: 30, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8 },
+          "-=0.3"
         );
       }
       if (qrSectionRef.current) {
@@ -323,6 +332,73 @@ export default function PromoContent() {
               Muestra que nos sigues al hacer tu pedido para activar tu
               descuento.
             </p>
+          </div>
+        </section>
+
+        <section
+          ref={messageRef}
+          className="relative mx-auto max-w-3xl mb-14 px-1"
+          aria-labelledby="message-title"
+        >
+          <div className="bg-white/75 backdrop-blur rounded-3xl shadow-xl border border-rose-100 px-5 py-9 sm:p-10 md:p-12">
+            <h2
+              id="message-title"
+              className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight tracking-tight mb-6 sm:mb-8 text-transparent bg-clip-text"
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, #b45309 0%, #f43f5e 25%, #ec4899 50%, #f43f5e 75%, #b45309 100%)",
+              }}
+            >
+              Un amor que no se marchita... <span aria-hidden="true">🌹</span>
+            </h2>
+
+            <div className="grid md:grid-cols-[1fr_auto] md:gap-10 gap-8 items-center">
+              <div className="space-y-4 text-amber-900 leading-relaxed text-base sm:text-lg md:text-[1.05rem] text-center md:text-left">
+                <p>
+                  Ser mamá es un arte que se lleva en el corazón todos los
+                  días, sin pausa y con un amor infinito.
+                </p>
+                <p>
+                  Por eso, hoy no te entregamos una flor cualquiera; te
+                  obsequiamos una flor eterna, porque tu dedicación, tu
+                  fuerza y tu ternura merecen un homenaje que dure para
+                  siempre.
+                </p>
+                <p className="pt-2 font-bold text-rose-600 text-lg sm:text-xl">
+                  ¡Feliz Día de las Madres!
+                </p>
+                <p className="text-sm sm:text-base italic text-amber-700">
+                  Te desea la familia de{" "}
+                  <a
+                    href="https://www.instagram.com/detallesmatthew_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold not-italic bg-gradient-to-r from-rose-600 via-pink-600 to-amber-600 bg-clip-text text-transparent hover:underline"
+                  >
+                    @detallesmatthew_
+                  </a>
+                  .
+                </p>
+              </div>
+
+              <div className="mx-auto md:mx-0 w-full max-w-[260px] sm:max-w-[280px] md:max-w-[260px]">
+                <div className="p-1.5 rounded-3xl bg-gradient-to-br from-amber-300 via-rose-300 to-pink-300 shadow-xl">
+                  <div className="relative aspect-[9/16] rounded-[1.35rem] overflow-hidden bg-black">
+                    <iframe
+                      src="https://www.youtube.com/embed/BdoCnV7LbAc?rel=0&modestbranding=1&playsinline=1"
+                      title="Detalles Matthew – Un amor que no se marchita"
+                      className="absolute inset-0 w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+                <p className="text-center text-[11px] sm:text-xs text-amber-700/80 mt-3">
+                  Toca para reproducir el video
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
